@@ -1,0 +1,66 @@
+Arroyave2018:
+  type: article
+  title: A new strategy for synchronizing traffic flow on a distributed simulation using SUMO
+  author:
+    - Nicolas Arroyave
+    - Andrés Acosta
+    - Jorge Espinosa Oviedo
+    - Jairo Espinosa Oviedo
+  year: 2018
+
+Chen2020:
+  type: article
+  title: "QarSUMO: A Parallel, Congestion-optimized Traffic Simulator"
+  author:
+    - Hao Chen
+    - Ke Yang
+    - Stefano Giovanni Rizzo
+    - Giovanna Vantini
+    - Phillip Taylor
+    - Xiaosong Ma
+    - Sanjay Chawla
+  parent:
+    type: book
+    title: Proceedings of the 28th International Conference on Advances in Geographic Information Systems
+    year: 2020
+    publisher: ACM
+
+SPartSim:
+  type: article
+  title: "SPartSim : A Space Partitioning Guided by Road Network for Distributed Traffic Simulations"
+  author:
+    - Anthony Ventresque
+    - Quentin Bragard
+    - Elvis S. Liu
+    - David Nowak
+    - Liam Murphy
+    - Georgios Theodoropoulos
+    - Qi Liu
+  page-range: 202-209
+  parent:
+    type: book
+    title: 2012 IEEE/ACM 16th International Symposium on Distributed Simulation and Real Time Applications
+    year: 2012
+
+SUMO:
+  type: web
+  title: Introduction
+  author: German Aerospace Center
+  year: 2015
+  url: https://sumo.dlr.de/docs/index.html.
+
+Krajzewicz2003:
+  type: article
+  title: "The 'Simulation of Urban MObility' package: An open source traffic simulation"
+  author: 
+    - Daniel Krajzewicz
+    - Markus Hartinger
+    - Georg Hertkorn
+    - Peter Mieth
+    - Julia Ringel
+    - Christian Rössel
+    - Peter Wagner
+  parent:
+    type: book
+    title: Proceedings of the 2003 European Simulation and Modelling Conference
+    year: 2003

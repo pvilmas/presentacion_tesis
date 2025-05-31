@@ -1,0 +1,30 @@
+#speaker-note(
+  [La idea de esta tesis nace del proyecto de implementación de una plataforma generadora de Gemelos Digitales para ciudades por parte del Barcelona Supercomputing Center (en conjunto con otras organizaciones). Para poder generar un gemelo digital de una ciudad, es necesario poder modelar su tráfico vehicular, ya que esto determina gran parte de las interacciones y dinámicas de una ciudad.]
+)
+
+#speaker-note(
+  [Para este trabajo en particular, decidí enfocarme en el software SUMO, dada su alta portabilidad y por su apertura de código, además de su compatibilidad con redes de caminos de diversas fuentes para simular.]
+)
+ ======= RESULTADOS ========
+#speaker-note(
+  [Como es posible observar, hay una diferencia significativa entre la cota superior de los tiempos de simulación de la versión secuencial con las versiones paralelizadas, alcanzando un mínimo a las 16 particiones. Es importante notar que, además, para las simulaciones con 32 y 64 particiones, esta cota tiende a subir.]
+)
+
+#speaker-note(
+  [Por otro lado, este gráfico muestra la comparación entre la evolución de los tiempos de simulación entre _sets_ de particiones. De aquí se desprende la observación de que, a medida que se aumenta el número de particiones, el costo en tiempo de ejecución para simulaciones con bajas tasas de inserción de vehículos tiende a crecer, a la vez que los tiempos de simulación se comportan de una manera más lineal (es decir, el incremento en los tiempos de simulación es menor entre período y período).]
+)
+
+#speaker-note(
+  [En cuanto al _speedup_, en el gráfico de la izquierda podemos ver una comparación de los _speedup_ obtenidos para cada simulación. De aquí se puede observar que, si bien es posible alcanzar altas disminuciones en el tiempo de ejecución de las simulaciones para escenarios con una tasa de inserción de vehículos moderada, para escenarios con una alta tasa de inserción la _performance_ tiende a disminuir.
+  
+  Ahora, en cuanto a la eficiencia (que fue calculada como la razón entre el speedup y el número de particiones), en el gráfico de la derecha podemos apreciar que para un número de particiones menor o igual a 16, se tiene una alta eficiencia sobre los tiempos de simulación para tasas de generación de vehículos que se encuentran alrededor y bajo la mediana, mientras que para escenarios con mayor congestión de tráfico la eficiencia de la solución propuesta tiende a descender.]
+)
+
+#speaker-note(
+  [En cuanto al uso de CPU, este gráfico muestra que aún en los casos menos óptimos, el uso de este recurso no alcanza a ser el 100% de lo que se le asigna a los procesos, mostrando que efectivamente la solución propuesta logra optimizar el uso de CPU.]
+)
+#speaker-note(
+  [Balance de cargas -> puede que estén quedando nodos con demasiada carga para números grandes de particiones y eso retrase las cosas
+  
+  Pérdida de información -> con el corte de rutas, hay información que se pierde, lo que implica una menor carga para los nodos de ejecución]
+)
